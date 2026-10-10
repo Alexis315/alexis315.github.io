@@ -128,7 +128,11 @@ footer{border-top:1px solid var(--line);margin-top:3rem}
 .foot-brand{display:flex;align-items:center;gap:.8rem}
 .copy{font-family:var(--mono);font-size:.8rem;color:var(--muted)}
 .disclaimer{font-size:.85rem;color:var(--muted);max-width:75ch;border-left:2px solid var(--accent);padding-left:1rem}
-.donate{align-self:start}
+/* audio summary module */
+.audio-module{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.25rem;margin:0 0 2rem}
+.audio-module .eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--muted);margin:0 0 .7rem}
+.audio-module audio{width:100%;display:block}
+.audio-note{font-size:.8rem;color:var(--muted);margin:.6rem 0 0}
 /* article page */
 .article-wrap{max-width:760px;margin:0 auto;padding:2.5rem 1.5rem 3rem}
 .article-wrap h1{font-family:var(--serif);font-size:2.4rem;line-height:1.2;text-wrap:balance;margin:1rem 0 .6rem}
@@ -172,7 +176,28 @@ footer{border-top:1px solid var(--line);margin-top:3rem}
     <span class="scan">Last scan: <time id="scan-time">2026-10-11</time> · Dubai</span>
   </div>
 </header>
-<main id="main" class="article-wrap"><p><a class="backlink" href="/">&larr; Back to the live paper</a></p><h1>The Diesel Deal: What the Trump–Putin Fuel Pact Reveals About the Iran War, the Midterms, and the New Energy Map</h1><p class='article-dek'>One phone call moved diesel markets, lifted sanctions, and exposed the real leverage map of the US-Israel war on Iran.</p><div class="article-meta"><span>2026-10-11</span><span>5,684 words</span><span>analysis</span></div><div class="stack-chips" style="margin-bottom:1.5rem"><span class="chip">USA</span><span class="chip">Russia</span><span class="chip">Iran</span><span class="chip">Middle East</span><span class="chip">Energy</span><span class="chip">Sanctions</span><span class="chip">War</span><span class="chip">Economy</span></div><article class="article-body"><h1>The Diesel Deal: What the Trump–Putin Fuel Pact Reveals About the Iran War, the Midterms, and the New Energy Map</h1>
+<main id="main" class="article-wrap"><p><a class="backlink" href="/">&larr; Back to the live paper</a></p><h1>The Diesel Deal: What the Trump–Putin Fuel Pact Reveals About the Iran War, the Midterms, and the New Energy Map</h1><p class='article-dek'>One phone call moved diesel markets, lifted sanctions, and exposed the real leverage map of the US-Israel war on Iran.</p><div class="article-meta"><span>2026-10-11</span><span>5,684 words</span><span>analysis</span></div><div class="stack-chips" style="margin-bottom:1.5rem"><span class="chip">USA</span><span class="chip">Russia</span><span class="chip">Iran</span><span class="chip">Middle East</span><span class="chip">Energy</span><span class="chip">Sanctions</span><span class="chip">War</span><span class="chip">Economy</span></div>
+<div class="audio-module">
+  <p class="eyebrow">Listen — paper summary in our channel voice</p>
+  <audio id="paper-audio" controls preload="none" src="/assets/audio/diesel-deal-iran-war/seg00.mp3"></audio>
+  <p class="audio-note">A spoken summary of this paper, voiced for Times of The World.</p>
+</div>
+<script>
+(function(){
+  var chunks = ["/assets/audio/diesel-deal-iran-war/seg00.mp3","/assets/audio/diesel-deal-iran-war/seg01.mp3","/assets/audio/diesel-deal-iran-war/seg02.mp3","/assets/audio/diesel-deal-iran-war/seg03.mp3","/assets/audio/diesel-deal-iran-war/seg04.mp3","/assets/audio/diesel-deal-iran-war/seg05.mp3","/assets/audio/diesel-deal-iran-war/seg06.mp3","/assets/audio/diesel-deal-iran-war/seg07.mp3"];
+  var a = document.getElementById("paper-audio");
+  if(!a) return;
+  var i = 0;
+  a.addEventListener("ended", function(){
+    i++;
+    if(i < chunks.length){ a.src = chunks[i]; a.play().catch(function(){}); }
+  });
+  a.addEventListener("error", function(){
+    if(i < chunks.length - 1){ i++; a.src = chunks[i]; a.play().catch(function(){}); }
+  });
+})();
+</script>
+<article class="article-body"><h1>The Diesel Deal: What the Trump–Putin Fuel Pact Reveals About the Iran War, the Midterms, and the New Energy Map</h1>
 <p><strong>One phone call moved diesel markets, lifted sanctions, and exposed the real leverage map of the US-Israel war on Iran.</strong></p>
 <hr />
 <h2>The signal</h2>
@@ -386,7 +411,6 @@ footer{border-top:1px solid var(--line);margin-top:3rem}
     </div>
     <p class="copy">&copy; 2026 Times of The World &amp; Co. All rights reserved.</p>
     <p class="disclaimer">Times of The World exists to spread the truth. Nothing published here is advice of any kind &mdash; not financial, legal, medical, or otherwise. Read critically, verify independently.</p>
-    <a class="btn btn-primary donate" href="#" rel="noopener">Donate to spread the truth</a>
   </div>
 </footer>
 
